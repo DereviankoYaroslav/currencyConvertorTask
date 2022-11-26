@@ -7,6 +7,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { ConverterComponent } from './components/converter/converter.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConverterPageComponent } from './pages/converter-page/converter-page.component';
+import { ConverterElementComponent } from './components/converter-element/converter-element.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ConverterPageComponent } from './pages/converter-page/converter-page.co
     NavigationComponent,
     ConverterComponent,
     ConverterPageComponent,
+    ConverterElementComponent,
   ],
   imports: [
     BrowserModule,

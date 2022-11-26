@@ -9,7 +9,5 @@ import { CurrencyService } from 'src/app/services/currency.service';
   styleUrls: ['./converter.component.css']
 })
 export class ConverterComponent {
-  @Input() currency!: MyCurrency
-
-  details = false
+  @Input() currencies: MyCurrency[]
 }

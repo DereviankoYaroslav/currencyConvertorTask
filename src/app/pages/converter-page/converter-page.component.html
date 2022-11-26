@@ -3,6 +3,5 @@
 </div>
 
 <div *ngIf="currency | async as currencies">
-    <app-converter *ngFor="let currency of currencies; let i = index" [currency]="currency">
-    </app-converter>
+    <app-converter [currencies]="currencies"></app-converter>
 </div>

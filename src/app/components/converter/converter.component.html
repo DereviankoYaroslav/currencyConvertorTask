@@ -1,4 +1,3 @@
 <div class="py-4 px-6 rounded flex items-center flex-col mb-2">
-    <!-- <p *ngIf="currency.cc == 'USD'">{{currency.cc}}</p> -->
-   <p>{{currency.cc}} to UAH = {{currency.rate}}</p>
+    <app-converter-element [currencies]="currencies"></app-converter-element>
 </div>

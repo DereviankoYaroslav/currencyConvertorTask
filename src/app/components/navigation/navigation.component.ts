@@ -7,7 +7,7 @@ import { MyCurrency } from 'src/app/models/currency';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-  @Input() currencies!: MyCurrency[]
+  @Input() currencies: MyCurrency[]
 
 }
 

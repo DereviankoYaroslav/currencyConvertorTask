@@ -9,17 +9,14 @@ import { CurrencyService } from 'src/app/services/currency.service';
   styleUrls: ['./converter-page.component.css']
 })
 export class ConverterPageComponent {
-  //products: IProduct[] = []
 
-  loading = "Hello";
-  currency!: Observable<MyCurrency[]>;
+  currency: Observable<MyCurrency[]>;
 
   constructor(private currencyService: CurrencyService) {
   }
   ngOnInit(): void {
-    this.loading = 'Bad';
-    this.currency! = this.currencyService.getAll().pipe(
-      tap(() => console.log(this.currency!))
+    this.currency = this.currencyService.getAll().pipe(
+      tap(() => console.log(this.currency))
     );
   }
 }
