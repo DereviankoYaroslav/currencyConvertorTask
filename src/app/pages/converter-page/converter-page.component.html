@@ -1,0 +1,8 @@
+<div *ngIf="currency | async as currencies">
+    <app-navigation [currencies]="currencies"></app-navigation>
+</div>
+
+<div *ngIf="currency | async as currencies">
+    <app-converter *ngFor="let currency of currencies; let i = index" [currency]="currency">
+    </app-converter>
+</div>

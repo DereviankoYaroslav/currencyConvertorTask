@@ -1,0 +1,12 @@
+<nav class="absolute top-0 right-0 left-0 h-[50px] flex justify-between items-center text-white bg-gray-500 px-5">
+    <h1 class="font-bold">App</h1>
+    <div *ngFor="let currency of currencies; let i = index">
+        <div *ngIf="currency.cc === 'USD'">
+            <a class="mr-2">{{currency.cc}} : {{currency.rate}}</a>
+        </div>
+        <div *ngIf="currency.cc === 'EUR'">
+            <a class="mr-2">{{currency.cc}}: {{currency.rate}}</a>
+        </div>
+    </div>
+
+</nav>
