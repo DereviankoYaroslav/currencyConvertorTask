@@ -1,7 +1,4 @@
-export interface MyCurrency {
-    r030: number,
-    txt: string,
+export interface CurrencyData {
     rate: number,
-    cc: string,
-    exchangedate: string
+    cc: string
 }

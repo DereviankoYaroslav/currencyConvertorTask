@@ -8,6 +8,7 @@ import { ConverterComponent } from './components/converter/converter.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConverterPageComponent } from './pages/converter-page/converter-page.component';
 import { ConverterElementComponent } from './components/converter-element/converter-element.component';
+import { FilterCurrenciesPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,12 @@ import { ConverterElementComponent } from './components/converter-element/conver
     ConverterComponent,
     ConverterPageComponent,
     ConverterElementComponent,
+    FilterCurrenciesPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { MyCurrency } from 'src/app/models/currency';
+import { CurrencyData } from 'src/app/models/currency';
 import { CurrencyService } from 'src/app/services/currency.service';
 
 @Component({
@@ -10,12 +10,13 @@ import { CurrencyService } from 'src/app/services/currency.service';
 })
 export class ConverterPageComponent {
 
-  currency: Observable<MyCurrency[]>;
+  currency: Observable<CurrencyData[]>;
 
   constructor(private currencyService: CurrencyService) {
   }
+
   ngOnInit(): void {
-    this.currency = this.currencyService.getAll().pipe(
+    this.currency = this.currencyService.fetchCurrencies().pipe(
       tap(() => console.log(this.currency))
     );
   }

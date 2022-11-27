@@ -1,8 +1,5 @@
-<div>
-    <select onchange="document.getElementById('qwerty2').value = 2">
-        <option *ngFor="let currency of currencies" value="{{currency.cc}}">{{currency.cc}}</option>
-    </select> <input type="text" class="border-4" id="qwerty1">
-    <select onchange="document.getElementById('qwerty1').value = 1">
-        <option *ngFor="let currency of currencies" value="{{currency.cc}}">{{currency.cc}}</option>
-    </select> <input type="text" class="border-4" id="qwerty2">
+<div class="text-xl">
+    <select (change)="onChangeF($event)">
+        <option *ngFor="let currency of currencies" value="{{currency.rate}}">{{currency.cc}}</option>
+    </select> <input type="text" class="border-2 rounded pl-1" id="qwerty1" value="{{amount/coefficient}}" (input)="setAmount($event)">
 </div>

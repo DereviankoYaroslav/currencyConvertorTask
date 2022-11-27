@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MyCurrency } from 'src/app/models/currency';
+import { CurrencyData } from 'src/app/models/currency';
 
 @Component({
   selector: 'app-navigation',
@@ -7,7 +7,6 @@ import { MyCurrency } from 'src/app/models/currency';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-  @Input() currencies: MyCurrency[]
-
+  @Input() currencies: CurrencyData[];
 }
 

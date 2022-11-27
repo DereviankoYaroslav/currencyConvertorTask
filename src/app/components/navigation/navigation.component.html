@@ -1,11 +1,13 @@
-<nav class="absolute top-0 right-0 left-0 h-[50px] flex justify-between items-center text-white bg-gray-500 px-5">
-    <h1 class="font-bold">App</h1>
-    <div *ngFor="let currency of currencies; let i = index">
-        <div *ngIf="currency.cc === 'USD'">
-            <a class="mr-2">{{currency.cc}} : {{currency.rate}}</a>
-        </div>
-        <div *ngIf="currency.cc === 'EUR'">
-            <a class="mr-2">{{currency.cc}}: {{currency.rate}}</a>
+<nav class="absolute top-0 right-0 left-0 h-[50px] flex flex-row items-center text-white bg-gray-500 px-5">
+    <a href="/" class="font-bold left-0 text-xl">Currency Converter</a>
+    <div class="flex flex-row absolute right-1 text-base">
+        <div *ngFor="let currency of currencies | filterCurrencies currency" class="ml-2">
+            <div *ngIf="currency.cc === 'USD'">
+                <p class="mr-2">{{currency.cc}}: {{currency.rate | currency: '₴'}}</p>
+            </div>
+            <div *ngIf="currency.cc === 'EUR'">
+                <p class="mr-2">{{currency.cc}}: {{currency.rate | currency: '₴'}}</p>
+            </div>
         </div>
     </div>
 </nav>
