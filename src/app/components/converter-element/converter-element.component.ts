@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CurrencyData } from 'src/app/models/currency';
 
 @Component({
@@ -8,8 +8,8 @@ import { CurrencyData } from 'src/app/models/currency';
 })
 export class ConverterElementComponent implements OnInit {
   @Input() currencies: CurrencyData[];
-  @Input() onAmountChange: Function;
   @Input() amount: number;
+  @Output() onAmountChange = new EventEmitter<number>();
 
   coefficient: number;
 
@@ -25,6 +25,6 @@ export class ConverterElementComponent implements OnInit {
   setAmount = (event: Event) => {
     let x = (event.target as HTMLInputElement).value;
     this.amount = x ? parseFloat(x) : 0;
-    this.onAmountChange(this.amount*this.coefficient);
+    this.onAmountChange.emit(this.amount*this.coefficient);
   }
 }

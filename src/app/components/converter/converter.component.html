@@ -1,4 +1,4 @@
 <div class="py-4 px-6 rounded flex items-center flex-row mb-2 m-auto justify-center">
-    <app-converter-element [currencies]="currencies" [onAmountChange]="onAmountChange" [amount]="defaultAmount"></app-converter-element>
-    <app-converter-element [currencies]="currencies" [onAmountChange]="onAmountChange" [amount]="defaultAmount"></app-converter-element>
+    <app-converter-element [currencies]="currencies" (onAmountChange)="onAmountChange($event)" [amount]="defaultAmount"></app-converter-element>
+    <app-converter-element [currencies]="currencies" (onAmountChange)="onAmountChange($event)" [amount]="defaultAmount"></app-converter-element>
 </div>
